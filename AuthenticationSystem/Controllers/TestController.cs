@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthenticationSystem.Controllers
@@ -6,7 +7,7 @@ namespace AuthenticationSystem.Controllers
     public class TestController : Controller
     {
         // GET: TestController
-        
+        [Authorize]
         public ActionResult Secret()
         {
             return View();
